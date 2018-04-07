@@ -41,6 +41,7 @@ cd src
 npm start
 ```
 Brings up the dashboard and loads the react app using localhost:3000
+
 5) Prepare the purse - need another shell if the last one is still running the prior step's npm start
 ```shell
 cd agama/gui/EasyDEX-GUI/react
@@ -50,6 +51,7 @@ npm install
 npm start
 ```
 The wallet should come up at this point
+
 6) toggle dev and debug options in settings, then restart the wallet
 7) Choose komodo coin in native mode and start it. This syncs komodod which takes hours.
 8) You are ready to dev
