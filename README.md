@@ -19,11 +19,13 @@ sudo apt-get install -y build-essential
 
 1) Clone Agama Desktop App with EasyDEX-GUI submodule
 ```shell
-git clone https://github.com/miketout/agama --recursive --branch pkg_automation_electrum --single-branch```
+git clone https://github.com/miketout/agama --recursive --branch pkg_automation_electrum --single-branch
+```
 2) get binary artifacts
 ```shell
 cd agama
 ./binary_artifacts.sh
+```
 3) install the electron packager and prebuilt
 ```shell
 npm install electron-packager -g
@@ -36,7 +38,8 @@ npm install && npm install webpack webpack-dashboard
 cd react
 npm install
 cd src
-npm start```
+npm start
+```
 Brings up the dashboard and loads the react app using localhost:3000
 5) Prepare the purse - need another shell if the last one is still running the prior step's npm start
 ```shell
@@ -44,7 +47,8 @@ cd agama/gui/EasyDEX-GUI/react
 npm run build
 cd ../../..
 npm install
-npm start```
+npm start
+```
 The wallet should come up at this point
 6) toggle dev and debug options in settings, then restart the wallet
 7) Choose komodo coin in native mode and start it. This syncs komodod which takes hours.
