@@ -1,8 +1,8 @@
 # Agama Desktop App
 Desktop App for SuperNET DAPPs
 
-#### For Developers
-You must have `node.js` and `npm` installed on your machine.
+#### For Ubuntu/Mint Developers
+You must have `node.js` and `npm` installed on your machine, and not the older version that you get from apt-get install. Get it like this:
 node 9.x:
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -60,6 +60,7 @@ sudo apt-get install -y build-essential
 8) You are ready to dev
 
 ### Important dev notes
+Windows: needs python
 
 #### Sockets.io
 In dev mode backend is configured to send/receive messages from/to http://127.0.0.1:3000 address. If you open it as http://localhost:3000 sockets server will reject any messages.
