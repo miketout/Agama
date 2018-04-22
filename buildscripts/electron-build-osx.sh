@@ -17,4 +17,5 @@ electron-packager . --platform=darwin --arch=x64 \
   --ignore=react/node_modules \
   --ignore=react/src \
   --ignore=react/www \
+  --no-prune \
   --overwrite
