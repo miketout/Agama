@@ -67,6 +67,8 @@ module.exports = (shepherd) => {
         coin === 'WLC' ||
         coin === 'MNZ' ||
         coin === 'BTCH' ||
+        coin === 'VERS' ||
+        coin === 'VERSTEST' ||
         coin === 'KMD' ||
         coin === 'BEER' ||
         coin === 'PIZZA' ||
@@ -95,6 +97,8 @@ module.exports = (shepherd) => {
         coinUC === 'WLC' ||
         coinUC === 'MNZ' ||
         coinUC === 'BTCH' ||
+        coinUC === 'VERS' ||
+        coinUC === 'VERSTEST' ||
         coinUC === 'BEER' ||
         coinUC === 'PIZZA' ||
         coinUC === 'VOTE2018' ||

@@ -52,3 +52,11 @@ coins
 
 # Electron-builder related folders
 build
+
+# IntelliJ
+.idea/
+
+__MACOSX/
+
+# build stuff
+assets

@@ -30,6 +30,8 @@ const assetChainPorts = {
   'VOTE2018': '15488',
   'NINJA': '8427',
   'BTCH': '8800',
+  'VERS': '8800', // TODO: Figure out correct port for Verus
+  'VERSTEST': '8800', // TODO: Figure out correct port for VerusTest
 };
 
 module.exports = assetChainPorts;

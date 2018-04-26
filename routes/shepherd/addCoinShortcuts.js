@@ -190,6 +190,75 @@ module.exports = (shepherd) => {
           //resolve(body);
         }
       });
+    } else if (selection === 'VERS') {
+      // TODO: The usual fixing of IP etc. for Verus
+        const herdData = {
+            'ac_name': 'VERS',
+            'ac_options': [
+                '-daemon=0',
+                '-server',
+                `-ac_name=VERS`,
+                '-addnode=78.47.196.146',
+                '-ac_supply=200000000'
+            ]
+        };
+
+        const options = {
+            url: `http://127.0.0.1:${shepherd.appConfig.agamaPort}/shepherd/herd`,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                herd: 'komodod',
+                options: herdData,
+                token: shepherd.appSessionHash,
+            }),
+        };
+
+        shepherd.request(options, (error, response, body) => {
+            if (response &&
+                response.statusCode &&
+                response.statusCode === 200) {
+                //resolve(body);
+            } else {
+                //resolve(body);
+            }
+        });
+    }  else if (selection === 'VRSTEST') {
+        const herdData = {
+            'ac_name': 'VRSTEST',
+            'ac_options': [
+                '-daemon=0',
+                '-server',
+                `-ac_name=VRSTEST`,
+                '-addnode=78.47.196.146',
+                '-ac_supply=200000000'
+            ]
+        };
+
+        const options = {
+            url: `http://127.0.0.1:${shepherd.appConfig.agamaPort}/shepherd/herd`,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                herd: 'komodod',
+                options: herdData,
+                token: shepherd.appSessionHash,
+            }),
+        };
+
+        shepherd.request(options, (error, response, body) => {
+            if (response &&
+                response.statusCode &&
+                response.statusCode === 200) {
+                //resolve(body);
+            } else {
+                //resolve(body);
+            }
+        });
     } else {
       const herdData = [{
         'ac_name': 'komodod',
