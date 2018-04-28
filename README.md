@@ -56,10 +56,9 @@ Brings up the dashboard and loads the react app using localhost:3000
 cd agama/gui/EasyDEX-GUI/react/src
 npm run build
 ```
-8) Get the top level stuff set, after the cd you shold be in the root agama dir. Also need to install electron here too.
+8) Get the top level stuff set, after the cd you should be in the root agama dir
 ```shell
-cd ../../..
-sudo npm install electron -g --unsafe-perm=true --allow-root
+cd ../../../..
 npm install
 ```
 9) At this point you can test things by running the wallet directly from electron:
@@ -73,7 +72,8 @@ This is a pretty wrapper around electron. I set the environment to production to
 11) toggle dev and debug options in settings, note the view menu that mentions denugging, that brings up the browser console which is quite useful, allowing variable examination and break points. Code has been squashed so more work is needed to get breakpoints completely useful.
 
 12) sync komodod and/or asset chains - now that the wallet is running if you choose Komodo native (or eventually Verus) it will load the assect chain. It's taking me 16 hours on a local VM to get it loaded the first time. It only takes 10 or 30 minutes to catch up on startup after that if things are going well.
-You are ready to dev
+
+13) Once you have your changes ready and working you can produce the Linux executable image
 ### Important dev notes
 
 #### Sockets.io
