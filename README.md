@@ -50,6 +50,7 @@ cd src
 npm start
 ```
 Brings up the dashboard and loads the react app using localhost:3000
+
 7) start a new shell and go back to the react/src dir and build things
 ```shell
 cd agama/gui/EasyDEX-GUI/react/src
@@ -65,10 +66,13 @@ npm install
 npm start
 ```
 This is a pretty wrapper around electron. I set the environment to production too.
+
 10) Check that things work. Choose the native Komodo, or once it works better still our Verus coin. Loading will take 10+ hours the first time to get the chain.
+
 11) toggle dev and debug options in settings, note the view menu that mentions denugging, that brings up the browser console which is quite useful, allowing variable examination and break points. Code has been squashed so more work is needed to get breakpoints completely useful.
+
 12) sync komodod and/or asset chains - now that the wallet is running if you choose Komodo native (or eventually Verus) it will load the assect chain. It's taking me 16 hours on a local VM to get it loaded the first time. It only takes 10 or 30 minutes to catch up on startup after that if things are going well.
-* You are ready to dev *
+You are ready to dev
 ### Important dev notes
 
 #### Sockets.io
