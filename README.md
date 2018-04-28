@@ -56,9 +56,10 @@ Brings up the dashboard and loads the react app using localhost:3000
 cd agama/gui/EasyDEX-GUI/react/src
 npm run build
 ```
-8) Get the top level stuff set, after the cd you should be in the root agama dir
+8) Get the top level stuff set, after the cd you should be in the root agama dir. We also need electron, again with the nasty souding unsafe-perm and allow-root options, otherwise electron post install steps fail.
 ```shell
 cd ../../../..
+sudo npm install electron -g --unsafe-perm=true --allow-root
 npm install
 ```
 9) At this point you can test things by running the wallet directly from electron:
