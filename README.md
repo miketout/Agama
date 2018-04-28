@@ -18,47 +18,56 @@ sudo apt-get install -y build-essential
 
 1) Clone Agama Desktop App with EasyDEX-GUI submodule
 ```shell
-git clone https://github.com/miketout/agama --recursive --branch pkg_automation_electrum --single-branch```
+git clone https://github.com/miketout/agama --recursive --branch pkg_automation_electrum --single-branch
+```
 with this command you git clone agama - but explicitly just the pkg_automation_electrum branch (therefore --single-branch) which we also use for the release packages.
-2) cd agama
-3) ./binary_artifacts.sh
-4) install the electron packager and prebuilt - note the ugly unsafe-perm and allow-root stuff for the prebuilt electron.
+2) Get the binary artfacts into place (linux version)
+```shell 
+cd agama
+./binary_artifacts.sh
+```
+3) install the electron packager and prebuilt - note the ugly unsafe-perm and allow-root stuff for the prebuilt electron.
 ```shell
 sudo npm install electron-packager -g
-sudo npm install electron-prebuilt -g --unsafe-perm=true --allow-root```
-5) cd gui/EasyDEX-GUI/
-6) Get Dave's fork for the new coin support
+sudo npm install electron-prebuilt -g --unsafe-perm=true --allow-root
+```
+4) Get Dave's fork for the new coin support
 ```shell
+cd gui/EasyDEX-GUI/
 git remote add dave git@github.com:DavidLDawes/EasyDEX-GUI.git
 git checkout -b prep
-git pull dave prep```
-7) get webpack dependencies into place for the react stuff
+git pull dave prep
+```
+5) get webpack dependencies into place for the react stuff
 ```shell
-npm install && npm install webpack webpack-dashboard```
-8) Now get the react stuff installed and running
+npm install && npm install webpack webpack-dashboard
+```
+6) Now get the react stuff installed and running
 ```shell
 cd react
 npm install
 cd src
-npm start```
+npm start
+```
 Brings up the dashboard and loads the react app using localhost:3000
-9) start a new shell and go back to the react/src dir and build things
+7) start a new shell and go back to the react/src dir and build things
 ```shell
 cd agama/gui/EasyDEX-GUI/react/src
-npm run build```
-1310
-10) back to the top (cd ../../.. or cd ~/agama)
-14
-11) Get the top level stuff set
+npm run build
+```
+8) Get the top level stuff set, after the cd you shold be in the root agama dir
 ```shell
-npm install```
-12) At this point you can test things by running the wallet directly from electron:
+cd ../../..
+npm install
+```
+9) At this point you can test things by running the wallet directly from electron:
 ```shell
-npm start```
-This is a pretty wrapper around electron ., although I have it setting the environment to production too
-13) Check that things work. Choose the native Komodo, or once it works better still our Verus coin. Loading will take 10+ hours the first time to get the chain.
-14) toggle dev and debug options in settings, note the view menu that mentions denugging, that brings up the browser console which is quite useful, allowing variable examination and break points. Code has been squashed so more work is needed to get breakpoints completely useful.
-15) sync komodod and/or asset chains - now that the wallet is running if you choose Komodo native (or eventually Verus) it will load the assect chain. It's taking me 16 hours on a local VM to get it loaded the first time. It only takes 10 or 30 minutes to catch up on startup after that if things are going well.
+npm start
+```
+This is a pretty wrapper around electron. I set the environment to production too.
+10) Check that things work. Choose the native Komodo, or once it works better still our Verus coin. Loading will take 10+ hours the first time to get the chain.
+11) toggle dev and debug options in settings, note the view menu that mentions denugging, that brings up the browser console which is quite useful, allowing variable examination and break points. Code has been squashed so more work is needed to get breakpoints completely useful.
+12) sync komodod and/or asset chains - now that the wallet is running if you choose Komodo native (or eventually Verus) it will load the assect chain. It's taking me 16 hours on a local VM to get it loaded the first time. It only takes 10 or 30 minutes to catch up on startup after that if things are going well.
 * You are ready to dev *
 ### Important dev notes
 
