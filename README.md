@@ -51,16 +51,17 @@ npm start
 ```
 Brings up the dashboard and loads the react app using localhost:3000
 
-7) start a new shell and go back to the react/src dir and build things
+7) start a new shell and go back to the react dir and build things (the EasyDEX-GUI)
 ```shell
-cd agama/gui/EasyDEX-GUI/react/src
+cd agama/gui/EasyDEX-GUI/react
 npm run build
 ```
-8) Get the top level stuff set, after the cd you should be in the root agama dir. We also need electron, again with the nasty souding unsafe-perm and allow-root options, otherwise electron post install steps fail. Similarly, we need to get libgconf too.
+8) Get the top level stuff set, after the cd you should be in the root agama dir. We also need electron, again with the nasty souding unsafe-perm and allow-root options, otherwise electron post install steps fail. Similarly, we need to get libgconf and webpack too.
 ```shell
-cd ../../../..
+cd ../../..
 sudo npm install electron -g --unsafe-perm=true --allow-root
 sudo apt-get install libgconf-2-4
+sudo apt install webpack
 npm install
 ```
 9) At this point you can test things by running the wallet directly from electron:
@@ -74,8 +75,8 @@ This is a pretty wrapper around electron. I set the environment to production to
 11) toggle dev and debug options in settings, note the view menu that mentions denugging, that brings up the browser console which is quite useful, allowing variable examination and break points. Code has been squashed so more work is needed to get breakpoints completely useful.
 
 12) sync komodod and/or asset chains - now that the wallet is running if you choose Komodo native (or eventually Verus) it will load the assect chain. It's taking me 16 hours on a local VM to get it loaded the first time. It only takes 10 or 30 minutes to catch up on startup after that if things are going well.
-
-13) Once you have your changes ready and working you can produce the Linux executable image
+13) If you modify code under gui/EasyDEX-GUI then you'll need to go to gui/EasyDEX-GUI/react/src and run npm run build again, then relaunch npm start from the agama dir. Changes to agama/routes just require relaunching npm start from the agama dir. If any dependencies change then you'll need to rerunnpm install in the appropriate directory.
+14) Once you have your changes ready and working you can produce the Linux executable image
 ### Important dev notes
 
 #### Sockets.io
