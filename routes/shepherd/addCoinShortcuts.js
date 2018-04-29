@@ -225,13 +225,13 @@ module.exports = (shepherd) => {
                 //resolve(body);
             }
         });
-    }  else if (selection === 'VRSTEST') {
+    }  else if (selection === 'VERSTEST') {
         const herdData = {
-            'ac_name': 'VRSTEST',
+            'ac_name': 'VERSTEST',
             'ac_options': [
                 '-daemon=0',
                 '-server',
-                `-ac_name=VRSTEST`,
+                `-ac_name=VERSTEST`,
                 '-addnode=78.47.196.146',
                 '-ac_supply=200000000'
             ]
