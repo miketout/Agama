@@ -1,7 +1,7 @@
 {
   "name": "agama-app",
   "productName": "Agama",
-  "version": "0.2.29",
+  "version": "0.2.30",
   "description": "Agama Wallet Desktop App",
   "main": "main.js",
   "scripts": {
@@ -11,21 +11,20 @@
     "make-deb": "node make-deb.js"
   },
   "repository": "https://github.com/KomodoPlatform/Agama/",
-  "homepage": "http://supernet.org",
+  "homepage": "http://komodoplatform.com",
   "keywords": [
     "agama",
     "SuperNET",
     "komodo",
     "multicoin",
     "wallet",
-    "spv"
+    "spv",
+    "jumblr"
   ],
   "author": "SuperNET Team",
   "license": "MIT",
   "devDependencies": {
-    "electron": "1.7.10",
-    "electron-installer-debian": "^0.6.0",
-    "electron-installer-redhat": "^0.5.0"
+    "electron": "1.8.3"
   },
   "dependencies": {
     "adm-zip": "^0.4.7",
@@ -33,15 +32,14 @@
     "async": "^2.6.0",
     "bigi": "^1.4.2",
     "bip39": "^2.4.0",
-    "bitcoinforksjs-lib": "git://github.com/bitcoinjs/bitcoinjs-lib#opt-in-bitcoincash-sighash",
     "bitcoinjs-lib": "git://github.com/SuperNETorg/bitcoinjs-lib",
-    "bitcoinjs-lib-zcash": "git://github.com/pbca26/bitcoinjs-lib#zcash",
     "bitcoinjs-lib-pos": "git://github.com/KomodoPlatform/bitcoinjs-lib-pos",
+    "bitcoinjs-lib-zcash": "git://github.com/pbca26/bitcoinjs-lib#zcash",
     "bluebird": "^3.4.7",
     "body-parser": "^1.15.2",
     "buffer-reverse": "^1.0.1",
     "coinselect": "github:bitcoinjs/coinselect",
-    "electron": "1.8.2",
+    "electron": "1.8.3",
     "express": "^4.14.0",
     "fix-path": "^2.1.0",
     "fs-extra": "^4.0.2",
@@ -55,6 +53,8 @@
     "request": "^2.80.0",
     "sha256": "^0.2.0",
     "socket.io": "^1.7.3",
+    "webpack": "^4.5.0",
+    "webpack-dashboard": "^1.1.1",
     "wif": "^2.0.6"
   }
 }
