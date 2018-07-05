@@ -1,7 +1,7 @@
 {
   "name": "agama-app",
   "productName": "Agama",
-  "version": "0.3.10",
+  "version": "0.3.9",
   "description": "Agama Wallet Desktop App",
   "main": "main.js",
   "scripts": {
@@ -10,8 +10,8 @@
     "make-rpm": "node make-rpm.js",
     "make-deb": "node make-deb.js",
     "test": "mocha",
-    "package-mac": "electron-packager . agama --platform=darwin --arch=x64 --icon=assets/icons/agama_icons/agama_app_icon.icns --prune=true ---buildVersion=0.3.8-beta --out=build/ --ignore=assets/bin/win64 --ignore=assets/bin/linux64 --overwrite",
-    "package-win": "electron-packager . agama --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/agama_icons/agama_app_icon.ico --out=build/ --buildVersion=0.3.8-beta --ignore=assets/bin/osx --ignore=assets/bin/linux64 --overwrite"
+    "package-mac": "electron-packager . agama --platform=darwin --arch=x64 --icon=assets/icons/agama_icons/agama_app_icon.icns --prune=true ---buildVersion=0.3.9-beta --out=build/ --ignore=assets/bin/win64 --ignore=assets/bin/linux64 --overwrite",
+    "package-win": "electron-packager . agama --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/agama_icons/agama_app_icon.ico --out=build/ --buildVersion=0.3.9-beta --ignore=assets/bin/osx --ignore=assets/bin/linux64 --overwrite"
   },
   "repository": "https://github.com/VerusCoin/Agama/",
   "homepage": "https://veruscoin.io/",
