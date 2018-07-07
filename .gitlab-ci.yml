@@ -109,7 +109,8 @@ test:
   stage: test
   image: node:8.11.3
   script:
-    - npm install test
+    - npm install
+    - npm test
 
 
 deploy:
