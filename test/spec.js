@@ -30,7 +30,7 @@ describe('Application launch', function () {
     })
   })
 
-  it('has a native coin drop down that takes <Tab>, should be VRSC', function () {
+  it('has a native coin list that takes <Tab>', function () {
     // Wait for the left button for native mode coins is visible
     this.app.client.element('#react-select-3--value').waitForVisible(3000)
     // Click on it and hit <Tab> to select the 1st - VerusCoin
@@ -39,12 +39,6 @@ describe('Application launch', function () {
 
   it('removes the coin selector', function() {
     return this.app.client.element('#react-select-3--value').waitForVisible(4000, true)
-  })
-
-  it('shows a single window', function () {
-    return this.app.client.getWindowCount().then(function (count) {
-      assert.equal(count, 1)
-    })
   })
 })
 
