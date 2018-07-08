@@ -50,7 +50,7 @@ describe('Application launch', function () {
     resolverDone()
   }
 
-  it('delays for a second', function() {
+  it('delays for a bit', function() {
     return new Promise(function(resolve) {
       setTimeout(resolve, 500, true);
     });
