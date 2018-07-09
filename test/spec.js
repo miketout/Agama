@@ -44,12 +44,6 @@ describe('Application launch', function () {
     })
   })
 
-  var resolverDone, resolverResolve
-  var resolver = function() {
-    resolverResolve()
-    resolverDone()
-  }
-
   it('delays for a bit', function() {
     return new Promise(function(resolve) {
       setTimeout(resolve, 500, true);
